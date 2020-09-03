@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 public class Student {
 
-	String firstName;
+	private String firstName;
 	
-	String lastName;
+	private String lastName;
+	
+	private String country;
+	
 }

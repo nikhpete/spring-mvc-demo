@@ -24,6 +24,8 @@ public class StudentController {
 		
 		System.out.println(std.getFirstName()+" "+std.getLastName());
 		
+		System.out.println(std.getCountry());
+		
 		return "student-confirm";
 	}
 }
