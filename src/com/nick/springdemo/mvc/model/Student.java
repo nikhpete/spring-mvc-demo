@@ -21,6 +21,8 @@ public class Student {
 	private String country;
 
 	private String favLang;
+	
+	private String[] opSys;
 
 	private LinkedHashMap<String, String> countryOptions;
 

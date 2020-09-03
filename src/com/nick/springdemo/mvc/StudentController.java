@@ -28,10 +28,6 @@ public class StudentController {
 		
 		System.out.println(std.getFirstName()+" "+std.getLastName());
 		
-		System.out.println(std.getCountry());
-		
-		System.out.println(std.getFavLang());
-		
 		return "student-confirm";
 	}
 }

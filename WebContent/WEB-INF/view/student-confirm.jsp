@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,5 +11,12 @@
 	<br> Country: ${student.country}
 	<br>
 	<br> Favorite Lang: ${student.favLang}
+	<br>
+	<br> Operating System: 
+		<ul>
+			<c:forEach var="ops" items="${student.opSys}">
+				<li>${ops}</li>
+			</c:forEach>
+		</ul>
 </body>
 </html>
