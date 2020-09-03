@@ -23,9 +23,7 @@
 		<br>
 		<br>
 	Operating System:
-		Mac <form:checkbox path="opSys" value="Mac"/>
-		Windows <form:checkbox path="opSys" value="Windows"/>
-		Linux <form:checkbox path="opSys" value="Linux"/>
+		<form:checkboxes items="${student.opSysOptions}" path="opSys"/>
 		<br>
 		<br>
 		<input type="submit" value="Submit" />

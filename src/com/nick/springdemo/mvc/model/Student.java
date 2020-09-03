@@ -21,12 +21,14 @@ public class Student {
 	private String country;
 
 	private String favLang;
-	
+
 	private String[] opSys;
 
 	private LinkedHashMap<String, String> countryOptions;
 
 	private LinkedHashMap<String, String> favLangOptions;
+
+	private LinkedHashMap<String, String> opSysOptions;
 
 	@PostConstruct
 	public void startUpStuff() {
@@ -41,6 +43,12 @@ public class Student {
 		this.favLangOptions.put("Java", "Java");
 		this.favLangOptions.put("C#", "C#");
 		this.favLangOptions.put("PHP", "PHP");
+
+		this.opSysOptions = new LinkedHashMap<>();
+		this.opSysOptions.put("Mac", "Mac");
+		this.opSysOptions.put("Windows", "Windows");
+		this.opSysOptions.put("Linux", "Linux");
+		this.opSysOptions.put("Android", "Android");
 	}
 
 }
