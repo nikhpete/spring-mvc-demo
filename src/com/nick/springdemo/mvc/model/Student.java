@@ -15,15 +15,17 @@ import lombok.NoArgsConstructor;
 public class Student {
 
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String country;
-	
+
 	private String favLang;
-	
+
 	private LinkedHashMap<String, String> countryOptions;
-	
+
+	private LinkedHashMap<String, String> favLangOptions;
+
 	@PostConstruct
 	public void startUpStuff() {
 		this.countryOptions = new LinkedHashMap<>();
@@ -32,6 +34,11 @@ public class Student {
 		this.countryOptions.put("DE", "Germany");
 		this.countryOptions.put("IN", "India");
 		this.countryOptions.put("US", "USA");
+
+		this.favLangOptions  = new LinkedHashMap<>();
+		this.favLangOptions.put("Java", "Java");
+		this.favLangOptions.put("C#", "C#");
+		this.favLangOptions.put("PHP", "PHP");
 	}
-	
+
 }
