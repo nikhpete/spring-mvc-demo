@@ -29,6 +29,6 @@ public class Customer {
 	@Pattern(regexp = "[a-zA-Z0-9]{5}", message = "not valid Postal Code")
 	private String postalCode;
 
-	@CourseCode(value = "LUV", message = "starts with LUV")
+	@CourseCode(value = {"LUV","TOPS"}, message = "starts with LUV/TOPS")
 	private String courseCode;
 }

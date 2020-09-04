@@ -13,7 +13,7 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CourseCode {
 
-	public String value() default "NIK";
+	public String[] value() default "NIK";
 	
 	public String message() default "must start with NIK";
 	
