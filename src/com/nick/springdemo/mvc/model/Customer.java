@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.nick.springdemo.mvc.validation.CourseCode;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,4 +29,6 @@ public class Customer {
 	@Pattern(regexp = "[a-zA-Z0-9]{5}", message = "not valid Postal Code")
 	private String postalCode;
 
+	@CourseCode(value = "LUV", message = "starts with LUV")
+	private String courseCode;
 }

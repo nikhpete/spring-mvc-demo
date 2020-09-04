@@ -1,5 +1,7 @@
 package com.nick.springdemo.mvc.validation;
 
+import java.util.Objects;
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
@@ -8,13 +10,16 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 	private String coursePrefix;
 	
 	@Override
-	public void initialize(CourseCode coursePrefix) {
-		this.coursePrefix = coursePrefix.value();
+	public void initialize(CourseCode code) {
+		this.coursePrefix = code.value();
 	}
 
 	@Override
 	public boolean isValid(String code, ConstraintValidatorContext context) {
 		
+		if(Objects.isNull(code)) {
+			return true;
+		}
 		boolean result = code.startsWith(coursePrefix);
 		
 		return result;
